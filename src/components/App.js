@@ -123,12 +123,12 @@ function App() {
   }
 
   const onLogin = (data) => {
+    setUserInfo(data.email);
     return auth
       .authorize(data)
       .then((data) => {
         setLoggedIn(true);
         localStorage.setItem("jwt", data.token);
-        tokenCheck();
       })
       .catch(() => openRegisterPopup());
   };
