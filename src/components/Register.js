@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
-import * as auth from "./Auth.js";
+import * as auth from "../utils/Auth.js";
 import InfoTooltip from "./InfoTooltip.js";
 import authOk from "../images/Union.svg";
 import authNotOk from "../images/Union2.svg";
@@ -79,9 +79,13 @@ function Register() {
           Зарегистрироваться
         </button>
       </form>
-      <NavLink exact to="/sign-in" className="auth__link">
-        Уже зарегистрированы? Войти
-      </NavLink>
+      <p className="auth__text">
+        Уже зарегистрированы?{" "}
+        <NavLink exact to="/sign-in" className="auth__link">
+          Войти
+        </NavLink>
+      </p>
+
       <InfoTooltip
         isOpen={isRegisterPopupOpen}
         text={`${

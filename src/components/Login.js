@@ -24,24 +24,6 @@ function Login({ onLogin }) {
     );
   };
 
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   if (!email || !password) {
-  //     return;
-  //   }
-  //   auth
-  //     .authorize(password, email)
-  //     .then((data) => {
-  //       if (data.token) {
-  //         setEmail("");
-  //         setPassword("");
-  //         props.handleLogin(e);
-  //         props.history.push("/");
-  //       }
-  //     })
-  //     .catch((err) => console.log(err));
-  // }
-
   return (
     <div className="auth">
       <h3 className="auth__title">Вход</h3>

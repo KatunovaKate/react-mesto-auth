@@ -13,7 +13,7 @@ const headers = {
   "Content-Type": "application/json",
 };
 
-export const register = ({password, email}) => {
+export const register = ({ password, email }) => {
   return fetch(`${BASE_URL}/signup`, {
     method: "POST",
     headers,
@@ -21,11 +21,11 @@ export const register = ({password, email}) => {
   }).then((res) => checkResponse(res));
 };
 
-export const authorize = ({password, email}) => {
+export const authorize = ({ password, email }) => {
   return fetch(`${BASE_URL}/signin`, {
     method: "POST",
     headers,
-    body: JSON.stringify({password, email }),
+    body: JSON.stringify({ password, email }),
   }).then((res) => checkResponse(res));
 };
 

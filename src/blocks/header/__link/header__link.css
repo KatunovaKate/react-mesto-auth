@@ -7,7 +7,9 @@
   color: white;
   text-decoration: none;
   visibility: visible;
-  opacity: 1;;
+  opacity: 1;
+  border: 0;
+  background-color: black;
 }
 
 .header__link:hover {
